@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from PIL import Image
-import cv2, os
+import cv2, os, time
 
 img = Image.open("./workspace/view.jpg")
 print(os.path.getsize("./workspace/view.jpg")/(1000*1000))
@@ -45,6 +45,10 @@ bit("./workspace/AnimatedStory.mov")
 bit("./workspace/IMG_1348.mp4")
 content = 'a.v'
 print(len(content))
+
+print(time.time())
+print(time.localtime(time.time()))
+print(time.strftime('%Y_%m_%d_%H_%M', time.localtime(time.time())))
 
 
 
