@@ -43,10 +43,12 @@ def write_to_excel(path, *info):
 	print("表格写入数据成功！")
 
 def sort_by_creation_time(files):
+	#bubble sort
 	for i in range(len(files)-1):
 		for j in range(len(files)-i-1):
 			if os.path.getctime(files[j+1]) > os.path.getctime(files[j]):
 				files[j], files[j+1] = files[j+1], files[j]
+	print(files)
 	return files
 
 #得到文件中关键信息

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from PIL import Image
-import cv2, os, time
+import cv2, os, time, copy
 
 # img = Image.open("./workspace/view.jpg")
 # print(os.path.getsize("./workspace/view.jpg")/(1000*1000))
@@ -53,17 +53,51 @@ import cv2, os, time
 
 
 
-file = os.getcwd() + "/workspace"
-for root, dirs, files in os.walk(file):
-	for file in files:
-		tmp = root + "/" + file
-		print(tmp)
-		print("mtime:", os.path.getmtime(tmp))
-		print("ctime:", os.path.getctime(tmp))
-		print()
+# file = os.getcwd() + "/workspace"
+# for root, dirs, files in os.walk(file):
+# 	for file in files:
+# 		tmp = root + "/" + file
+# 		print(tmp)
+# 		print("mtime:", os.path.getmtime(tmp))
+# 		print("ctime:", os.path.getctime(tmp))
+# 		print()
 
-# l1 = [1,3,4]
-# tmp = l1[0]
-# l1[0] = l1[1]
-# l1[2] = tmp
+l1 = [1,3,4]
+print(id(l1[0]), id(l1[1]))
+tmp = l1[0]
+print(id(tmp))
+l1[0] = l1[1]
+print(id(tmp))
+l1[1] = tmp
+print(l1)
+# # l1[0], l1[1] = l1[1], l1[0]
+# x = 2
+# y = 4
+# tmp = x
+# x = y
+# y = tmp
 # print(l1)
+# print(x, y)
+
+# num = [1, 3, 4]
+# def changeList1(L):
+# 	L.append(2)
+# 	print(L)
+# changeList1(num)
+# print(num)
+# print("***********************************")
+# def changeList2(*L):
+# 	# L.append(5)
+# 	print(L)
+# changeList2(*num)
+# print(num)
+
+# a = [1, [2, [3, 4]], 5]
+
+# b = copy.copy(a)
+# c = copy.deepcopy(a)
+# print(id(a[1]))
+# print(id(b[1]))
+# print(id(c[1]))
+
+
