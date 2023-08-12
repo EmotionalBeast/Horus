@@ -1,5 +1,5 @@
 ./README.md
-/__pycache__
+# /__pycache__
 .DStone
 *.xls
-
+.DS_Store
