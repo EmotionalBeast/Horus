@@ -93,8 +93,8 @@ if __name__ == "__main__":
 
 	timeStr = time.strftime('%Y_%m_%d_%H_%M', time.localtime(time.time()))
 
-	pic_xls_path = path + "/workspace/picture_info_" + timeStr + ".xls"
-	vid_xls_path = path + "/workspace/video_info_" + timeStr + ".xls"
+	pic_xls_path = path + "/example/picture_info_" + timeStr + ".xls"
+	vid_xls_path = path + "/example/video_info_" + timeStr + ".xls"
 	
 	if len(pic_info) != 0:
 		write_to_excel(pic_xls_path, *pic_info)
